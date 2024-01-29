@@ -82,7 +82,15 @@ add_action('save_post', 'save_custom_fields');
  */
 
 function tmCssJsEnque(){
-    wp_enqueue_style();
+    // Enqueue Theme style
+    wp_enqueue_style('tm-style',get_stylesheet_uri()); // style.css file is
+    // Register style
+    wp_register_style('tm-bootstrap-style','https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css',array(),'5.0.2','all');
+
+   // Enqueue style and script
+    wp_enqueue_style('tm-bootstrap-style');
+    wp_enqueue_script('tm-bootstrap-script','https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js',array(),'5.0.2',true);
+    wp_enqueue_script('tm-cusom-main',get_template_directory_uri().'/js/main.js',array(),'1.0.0',true);
 }
 
 add_action('wp_enqueue_scripts','tmCssJsEnque');
