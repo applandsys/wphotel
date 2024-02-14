@@ -1,16 +1,9 @@
-<!-- footer -->
-<footer class="footer">
-    <div class="container">
-        <div class="text-center p-2">
-            <!-- copyright -->
-            <p class="copyright">
-                &copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>.
-            </p>
-            <!-- /copyright -->
-        </div><!-- /.row -->
-    </div><!-- /.container -->
-</footer>
-<!-- /footer -->
+    <!-- footer -->
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <span class="text-muted">Hotel Grand Plaza. All right reserved &copy; 2024</span>
+        </div>
+    </footer>
 
 </div>
 <!-- /wrapper -->
